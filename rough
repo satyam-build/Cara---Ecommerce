@@ -1,0 +1,52 @@
+import React ,{useContext,useRef} from 'react'
+import { CartContext } from '../../Cartcontext'
+import f1 from "../media/img/products/f1.jpg"
+
+function Item() {
+const {addToCart} = useContext(CartContext);
+const idRef = useContext(null);
+const imgRef = useRef(null);
+const spanRef = useRef(null);
+const h5Ref = useRef(null);
+const h4Ref = useRef(null);
+const starRef = useRef(null);
+let Title,Id,ImageSrc,Product,Price,Rating;
+ const handleAddToCart =(item)=>{   
+    return(event)=>{
+        event.preventDefault();
+        Id = idRef.current.key;
+        Title = spanRef.current.innerText;
+        ImageSrc = imgRef.current.src;
+        Product = h5Ref.current.innerText;
+        Price = imgRef.current.src;
+        Rating = imgRef.current.src;
+
+        addToCart({Id,Title,ImageSrc,Product,Price,Rating})
+    }
+    
+
+ }
+  return (
+    <div className="pro-container">
+            <div className="pro" id='item1' key={123034}>
+                <img ref={imgRef} src={f1}  alt="Hello" />
+                <div className="des">
+                    <span ref={spanRef}>Adidas</span>
+                    <h5 ref={h5Ref}>Cartoon Astronaut Shirt</h5>
+                    <div className="star" ref={starRef}>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                    </div>
+                    <h4 ref={h4Ref}>$78</h4>
+                    </div>
+                    <a href="/"><i onClick={handleAddToCart('item1')} className="fa fa-shopping-cart cart"></i></a>
+            </div>
+            
+        </div>
+  )
+}
+
+export default Item

@@ -12,7 +12,7 @@ import data from '../data.json';
 
 function Item() {
     const prod = data.productList1;
-    
+    console.log(prod);
     const {addToCart} = useContext(CartContext);
     function handleAdd(value) {
         addToCart(value);
@@ -25,7 +25,7 @@ function Item() {
             {prod.map((item)=>{
                 return (
             <div className="pro" id='item1' key={item.id}>
-                <img  src={item.imgUrl} alt="Hello" />
+                <img  src={item.imgUrl} alt="Hello" loading='lazy' />
                 <div className="des">
                     <span >{item.brand}</span>
                     <h5 >{item.name}</h5>

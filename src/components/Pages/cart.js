@@ -98,7 +98,7 @@ function Cart() {
           </div>
         </div> : <div className="container">
           <h3 className='container-h3'>Your cart is Empty 😌</h3>
-          <img className='container-img' src="https://previews.dropbox.com/p/thumb/ACHXo4ceG_gegEAPPiKPqVTqUu2f4SBTf_7p5divuGGfOsAEM2ceyN-EgQElPLwDNjTEpbHICLDhThGYy-9-2VcKXfb7UDP4A3bshBtfNghRYYP-0rpb4imLxjH6lgWMn_7MybPjDUlCvm3asf8t4cf8r35pjqv0SdJz3HaOB4yS4x3huz8g5afp037nc3_6tlhHwdqN1UH7ye6fzVJpXtjOt0zni_8jdJxwfH-pJW0JakyYqiqBtY1iubz3QuZ3yq7445bSU4rQB18ZiFf_vPBUDtoT_NzWq17l0BUbGlTYzqskWPjFLLPJdIr3-n84CuV8Dj1XPwz6ZzDeYFela499/p.png" alt="" />
+          <img className='container-img' src="https://i.imgur.com/1fBIYaG.png" alt="" />
         </div>}
     </div>
   )
